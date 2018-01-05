@@ -1,0 +1,2 @@
+module Supervisor::CoursesHelper
+end

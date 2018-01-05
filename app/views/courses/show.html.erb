@@ -6,6 +6,7 @@
         <%= @course.name %>
       </h1>
       <p><%= @course.description %></p>
+      <%= link_to t(".view_subjects"), [@course, :subjects] %>
     </section>
   </aside>
 </div>

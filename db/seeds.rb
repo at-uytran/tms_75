@@ -6,10 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-100.times do |n|
+50.times do |n|
   Course.create!(name: "Example Course #{n+1}",
                  description: "lorem ipsum #{n+1}",
                  status: 1,
                  start_at: Time.zone.now,
                  end_at: Time.zone.now)
+
+  Subject.create!(name: "Example Subject #{n+1}",
+                  description: "subject lorem ipsum #{n+1}",
+                  duration: n)
+end
+
+20.times do |n|
+  CourseSubject.create!(course_id: Course.all.limit(20).ids.sample,
+                        subject_id: Subject.all.ids.sample,
+                        deadline: Time.zone.now)
 end

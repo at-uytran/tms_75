@@ -1,0 +1,7 @@
+<% provide :title, t("courses.title") %>
+<h1><% t ".title" %></h1>
+<%= will_paginate %>
+<ul class="courses">
+  <%= render partial: "course", collection: @courses, as: :course %>
+</ul>
+<%= will_paginate %>

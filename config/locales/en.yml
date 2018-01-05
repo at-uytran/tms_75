@@ -58,6 +58,7 @@ en:
     title: "Course"
     show:
       title: "Courses"
+      view_subjects: "View subjects"
     index:
       delete: "delete"
       confirm_delete: "Are you sure?"
@@ -96,3 +97,36 @@ en:
       message: "Account not activated.Check your email for the activation link."
     user_controller:
       update_success: "Profile updated"
+  subjects:
+    create:
+      success: "Subject created"
+    update:
+      success: "Update success"
+      failed: "Update failed"
+    destroy:
+      success: "Deleted"
+    load_subject:
+      not_found: "Could not found Subject"
+    title: "Subject"
+    show:
+      title: "Subjects"
+    index:
+      delete: "delete"
+      confirm_delete: "Are you sure?"
+    new:
+      title: "New Subject"
+      btn_submit: "Create"
+    edit:
+      title: "Update Subject"
+      btn_submit: "Save changes"
+  supervisor:
+    layouts:
+      header:
+        framgia: "<span>Framgia</span> TMS"
+        profile: "Profile"
+        settings: "Settings"
+        account: "Account"
+        log_in: "Log in"
+        log_out: "Log out"
+      footer:
+        des: "2018 Supervisor layout"

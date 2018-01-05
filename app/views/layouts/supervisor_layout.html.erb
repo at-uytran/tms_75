@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    <%= render "supervisor/layouts/shim" %>
+  </head>
+  <body>
+    <%= render "supervisor/layouts/header" %>
+    <div class="w3l_banner_nav_left">
+      <%= render "shared/sidebar" %>
+    </div>
+    <div class="w3l_banner_nav_right">
+      <div class="container">
+        <% flash.each do |message_type, message| %>
+          <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+        <% end %>
+        <%= yield %>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <%= render "supervisor/layouts/footer" %>
+    <%= debug(params) if Rails.env.development? %>
+  </body>
+</html>

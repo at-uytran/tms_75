@@ -1,0 +1,7 @@
+<li>
+  <%= link_to subject.name, subject %> |
+  <%= subject.duration %> |
+  <%= link_to t("subjects.index.delete"), subject,
+    method: :delete, data: {confirm: t("subjects.index.confirm_delete")} %> |
+  <%= link_to "update", edit_subject_path(subject) %>
+</li>
