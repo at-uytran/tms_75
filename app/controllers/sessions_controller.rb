@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
     log_in @user
     params[:session][:remember_me] == Settings.check_remember ? remember(@user) : forget(@user)
     flash[:success] = I18n.t "controllers.sessions_controller.success"
+    redirect_to supervisor_courses_path and return if current_user.admin? || current_user.trainer?
     redirect_to @user
   end
 

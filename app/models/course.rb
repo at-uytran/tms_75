@@ -43,4 +43,12 @@ class Course < ApplicationRecord
       end
     end
   end
+
+  def start_sb subject
+    course_subjects.where(subject_id: subject.id).start
+  end
+
+  def stop_sb subject
+    course_subjects.where(subject_id: subject.id).stop
+  end
 end

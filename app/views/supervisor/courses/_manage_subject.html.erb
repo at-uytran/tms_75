@@ -1,0 +1,12 @@
+<tr>
+  <% cs ||= @cs %>
+    <td><%= image_tag cs.subject.picture %></td>
+    <td><%= cs.subject.name %></td>
+    <td>
+      <% if cs.status == "init" || cs.status == "stopped"  %>
+          <%= render partial: "start_subject", object: @cs = cs %>
+      <% else %>
+          <%= render partial: "stop_subject", object: @cs = cs %>
+      <% end %>
+    </td>
+</tr>

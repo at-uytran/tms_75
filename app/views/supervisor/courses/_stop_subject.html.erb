@@ -1,0 +1,5 @@
+<%= form_for [:supervisor, @cs], remote: true, class: "form-group" do |f| %>
+  <%= f.hidden_field :status, value: "stopped" %>
+
+  <%= f.submit t(".btn_submit"), class: "btn btn-danger" %>
+<% end %>

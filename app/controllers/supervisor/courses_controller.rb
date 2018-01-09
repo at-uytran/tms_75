@@ -10,6 +10,7 @@ module Supervisor
     end
 
     def show
+      load_cs @course
       load_subjects @course
       load_trainers @course
       load_trainees @course
@@ -55,8 +56,23 @@ module Supervisor
 
     private
 
+    def update_status status
+      case status
+      when "in_progress"
+        start @course
+      when "finish"
+        stop @course
+      else
+        flash[:danger] = t "error"
+      end
+    end
+
     def course_params
       params.require(:course).permit :name, :description, :status, :start_at, :end_at, :picture
+    end
+
+    def load_cs course
+      @course_subjects = course.course_subjects.includes(:subject)
     end
 
     def load_course

@@ -1,0 +1,15 @@
+var id = '<%= @cou_subject.id %>';
+var status = '<%= @cou_subject.status %>';
+if(status == "init" || status == "stopped"){
+  $('#edit_course_subject_<%= @cou_subject.id %>').parent().html('<%= j(render('supervisor/courses/start_subject', object: @cs = @cou_subject)) %>');
+  showAlert(I18n.t("alert.stopped"));
+}
+else{
+  $('#edit_course_subject_<%= @cou_subject.id %>').parent().html('<%= j(render('supervisor/courses/stop_subject', object: @cs = @cou_subject)) %>');
+  showAlert(I18n.t("alert.started"));
+}
+
+function showAlert(message){
+  $('#alert').html(message);
+  $('#alert').show().fadeIn().delay(3000).fadeOut();
+}

@@ -59,7 +59,24 @@ en:
     courses:
       course:
         update: "update"
+      button:
+        add_trainer:
+          failed: "Failed to add user!"
+          btn_submit:
+            add: "add"
+        add_trainee:
+          btn_submit:
+            add: "add"
+        remove_user:
+          failed: "Failed to remove user"
+          btn_submit: "remove"
+      start_subject:
+        btn_submit: "start"
+      stop_subject:
+        btn_submit: "stop"
       update_status:
+        success: "success"
+        failed_update: "Failed to update status"
         success: "Course started!"
       form:
         init: "initialize"
@@ -247,3 +264,8 @@ en:
   helpers:
     courses:
       stoped: "Course stopped"
+  alert:
+    added: "Added"
+    removed: "Removed"
+    started: "Started"
+    stopped: "Stopped"

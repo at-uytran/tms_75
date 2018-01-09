@@ -2,6 +2,7 @@
 <% provide :button_text, t(".btn_submit") %>
 <div class="col-md-4">
   <h3><%= t ".title" %></h3>
+  <%= link_to @course.name, @course %>
   <div class="w3_login_module">
     <div class="module form-module">
       <%= render "form" %>
@@ -16,7 +17,8 @@
           <p><%= @course.status %></p>
         </div>
         <%= render "start_stop_form" %>
-      </div>
+        <%= link_to t("courses.index.delete"), supervisor_course_path(@course),
+          method: :delete, data: {confirm: t("courses.index.confirm_delete")}, class: "btn btn-warning" %>
     </div>
     <div class="add-remove-subject">
       <% if @course.init? %>
@@ -52,7 +54,7 @@
                 </tr>
               </thead>
               <tbody>
-                <%= render partial: "add_trainer", collection: @trainers, as: :trainer %>
+                <%= render partial: "manage_trainer", collection: @trainers, as: :trainer %>
               </tbody>
             </table>
             <table class="table table-bordered">
@@ -65,7 +67,7 @@
                 </tr>
               </thead>
               <tbody>
-                <%= render partial: "add_trainee", collection: @trainees, as: :trainee %>
+                <%= render partial: "manage_trainee", collection: @trainees, as: :trainee %>
               </tbody>
             </table>
           </div>
