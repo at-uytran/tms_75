@@ -58,3 +58,26 @@ footer {
 .start-stop-course .finished p {
   background-color: red;
 }
+
+#icon-status{
+ background-color: #ecffe6;
+ border: 3px solid #b3d9ff;
+ padding-top: 5px;
+ margin-top: 5px;
+}
+
+#task_init{
+  color: #00CC00;
+}
+
+#task_doing{
+  color: #3399FF;
+}
+
+#task_done{
+  color: #FF3333;
+}
+
+#action-task{
+  padding-top: 10px;
+}

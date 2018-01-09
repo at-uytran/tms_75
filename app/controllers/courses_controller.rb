@@ -52,6 +52,10 @@ class CoursesController < ApplicationController
     params.require(:course).permit :name, :description, :status, :start_at, :end_at, :picture
   end
 
+  def user_task_params
+    params.require(:user_task).permit :status, :user_id, :task_id
+  end
+
   def load_course
     @course = Course.find_by id: params[:id]
     return if @course
