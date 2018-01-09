@@ -37,3 +37,19 @@ footer {
 .w3l_banner_nav_right .container {
   padding: 25px;
 }
+#incon-status{
+ border: 2px solid #e4d9d9;
+ background-color: #fdf9f9;
+}
+
+#task_init{
+  color: #00CC00;
+}
+
+#task_doing{
+  color: #3399FF;
+}
+
+#task_done{
+  color: #FF3333;
+}

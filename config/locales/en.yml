@@ -110,6 +110,8 @@ en:
     load_course:
       not_found: "Could not found course"
     title: "Course"
+    subject:
+      alltime: " - %{time} days"
     show:
       title: "Courses"
       view_subjects: "View subjects"
@@ -164,8 +166,6 @@ en:
       activities: "Activities"
       profile: "Profile"
       progress: "Progress"
-
-
   shared:
     error_messages:
       content: "The form contains %{error_messages}"
@@ -179,6 +179,12 @@ en:
       pl_login: "Please login"
       update_success: "Profile updated"
   subjects:
+    finish_task:
+      doing: "In Progress"
+    receive_task:
+      init: "Init"
+    complete:
+      finished: "Finished"
     create:
       success: "Subject created"
     update:

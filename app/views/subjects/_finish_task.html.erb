@@ -1,0 +1,10 @@
+<% course_id ||= @course_id %>
+<% subject_id ||= @subject_id %>
+<% user_task ||= @user_task %>
+<%= form_for user_task, html: {id: "edit_user_task_#{user_task.id}", remote: true} do |f| %>
+  <%= hidden_field_tag :course_id, course_id %>
+  <%= hidden_field_tag :subject_id, subject_id %>
+  <%= hidden_field_tag :status, "done" %>
+
+  <%= f.submit t(".doing"), class: "btn btn-info" %>
+<% end %>

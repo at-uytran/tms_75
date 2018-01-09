@@ -20,6 +20,11 @@ class ApplicationController < ActionController::Base
     redirect_to(root_url) unless current_user?(@user)
   end
 
+  def correct_user?
+    find_user
+    return true if current_user?(@user)
+  end
+
   def find_user
     @user = User.find_by(id: params[:id])
     return if @user
