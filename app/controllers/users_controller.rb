@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @courses = current_user.courses.created_desc
+    @check = correct_user?
   end
 
   def edit; end

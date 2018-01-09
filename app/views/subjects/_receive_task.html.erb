@@ -1,0 +1,13 @@
+<% course_id ||= @course_id %>
+<% subject_id ||= @subject_id %>
+<% subject_id ||= @subject_id %>
+<%= form_for(current_user.user_tasks.build,
+  html: {id: "new_user_task_#{task_id}"}, remote: true) do |f| %>
+  <%= hidden_field_tag :task_id, task_id %>
+  <%= hidden_field_tag :user_id, user_id %>
+  <%= hidden_field_tag :course_id, course_id %>
+  <%= hidden_field_tag :subject_id, subject_id %>
+  <%= hidden_field_tag :status, "doing" %>
+
+  <%= f.submit t(".init"), class: "btn btn-primary" %>
+<% end %>

@@ -14,10 +14,12 @@
       <ul>
         <li><%= t".school" %><h2><span><%= @user.school %></span></h2></li>
       </ul>
+      <% if @check %>
       <ul>
         <li><button type="button" class="btn btn-primary">
           <%= link_to t(".edit"), edit_user_path(@user) %></button></li>
       </ul>
+      <% end %>
     </div>
     <div class="col-md-8 agileinfo_mail_grid_right">
       <ul class="nav nav-tabs">
