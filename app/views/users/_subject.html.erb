@@ -1,0 +1,8 @@
+<button type="button" class="btn btn-info" data-toggle="collapse"
+  data-target="#subject_<%= subject.id %>"></button>
+  <%= subject.name %><br>
+    <div id="subject_<%= subject.id %>" class="collapse">
+  <div id="status-task">
+    <%= render partial: "task", collection: Task.get_task(subject.id), as: :task %>
+  </div>
+</div>

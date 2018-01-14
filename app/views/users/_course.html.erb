@@ -1,0 +1,11 @@
+<div class="agile_top_brand_left_grid ">
+  <%= link_to course.name, [@course, :course] %>
+  <div class="agile_top_brand_left_grid1">
+    <figure>
+      <div class="snipcart-item block">
+        <% course.subjects.each do |subject| %>
+          <%= render partial: "subject", object: subject %>
+        <% end %>
+    </figure>
+  </div>
+</div>

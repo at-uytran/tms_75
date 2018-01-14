@@ -53,3 +53,43 @@ footer {
 #task_done{
   color: #FF3333;
 }
+
+.view-detail-user{
+  margin: 10px;
+}
+
+#show-user{
+  padding: 10px;
+  margin: 10px;
+  background-color: #ececf8;
+  border: solid #d9ffcc;
+  border-radius: 8px;
+}
+
+#show-user ul{
+  list-style-type: none;
+  text-align: left;
+}
+
+#show-tasks{
+  padding: 10px;
+  margin: 10px;
+  background-color: #ececf8;
+  border: solid #d9ffcc;
+  border-radius: 8px;
+}
+
+#status-task{
+  text-align: right;
+}
+
+.status-task{
+  width: 100px;
+  height: 20px;
+  display: inline-block;
+}
+
+.agile_top_brand_left_grid1 .btn{
+  width: 20px;
+  height: 20px;
+}

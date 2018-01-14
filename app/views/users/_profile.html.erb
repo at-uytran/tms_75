@@ -1,0 +1,20 @@
+<center><%= picture_for @user %></center>
+<ul>
+  <li><%= t".name" %><h4><span><%= @user.name %></span></h4></li>
+</ul>
+<ul>
+  <li><%= t".email" %><h4><span><%= @user.email %></span></h4></li>
+</ul>
+<ul>
+  <li><%= t".address" %><h4><span><%= @user.address %></span></h4></li>
+</ul>
+<ul>
+  <li><%= t".school" %><h4><span><%= @user.school %></span></h4></li>
+</ul>
+<% if @check %>
+<ul>
+  <li><center><button type="button" >
+  <i class="fa fa-pencil" ><%= link_to t(".edit"), edit_user_path(@user) %></i></button></center></li>
+
+</ul>
+<% end %>

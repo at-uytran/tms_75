@@ -1,65 +1,28 @@
-<div class="mail">
-  <div class="agileinfo_mail_grids">
-    <div class="col-sm-4">
-      <%= gravatar_for @user %>
-      <ul>
-        <li><%= t".name" %><h2><span><%= @user.name %></span></h2></li>
-      </ul>
-      <ul>
-        <li><%= t".email" %><h2><span><%= @user.email %></span></h2></li>
-      </ul>
-      <ul>
-        <li><%= t".address" %><h2><span><%= @user.address %></span></h2></li>
-      </ul>
-      <ul>
-        <li><%= t".school" %><h2><span><%= @user.school %></span></h2></li>
-      </ul>
-      <% if @check %>
-      <ul>
-        <li><button type="button" class="btn btn-primary">
-          <%= link_to t(".edit"), edit_user_path(@user) %></button></li>
-      </ul>
-      <% end %>
-    </div>
-    <div class="col-md-8 agileinfo_mail_grid_right">
-      <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#home">
-        <%= t"timeline." %></a></li>
-      <li><a data-toggle="tab" href="#activities"><%= t".activities" %></a></li>
-      <li><a data-toggle="tab" href="#profile"><%= t".profile" %></a></li>
-      <li><a data-toggle="tab" href="#progress"><%= t".progress" %></a></li>
-      </ul>
-      <div class="tab-content">
-        <div id="home" class="tab-pane fade in active">
-          <div class="w3ls_w3l_banner_nav_right_grid ">
-            <div class="hover14 column">
-              <% @courses.each do |course| %>
-              <div class="agile_top_brand_left_grid ">
-              <%= link_to course.name, [@course, :course] %>
-                <div class="agile_top_brand_left_grid1">
-                  <figure>
-                    <div class="snipcart-item block">
-                      <% course.subjects.each do |subject| %>
-                        <%= subject.name %><br>
-                        <%= render partial: "task", collection:
-                          Task.get_task(subject.id), as: :task %>
-                      <% end %>
-                    </div>
-                  </figure>
-                </div>
-              </div>
-              <% end %>
-            </div>
+<div class="view-detail-user">
+  <div class="col-sm-3" id="show-user">
+  <%= render partial: "profile", object: @user %>
+  </div>
+  <div class="col-md-8 agileinfo_mail_grid_right" id="show-tasks">
+    <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">
+      <%= t"timeline." %></a></li>
+    <li><a data-toggle="tab" href="#activities"><%= t".activities" %></a></li>
+    <li><a data-toggle="tab" href="#profile"><%= t".profile" %></a></li>
+    <li><a data-toggle="tab" href="#progress"><%= t".progress" %></a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <div class="w3ls_w3l_banner_nav_right_grid ">
+          <div class="hover14 column">
+            <% @courses.each do |course| %>
+              <%= render partial: "course", object: course %>
+            <% end %>
           </div>
         </div>
-        <div id="activities" class="tab-pane fade">
-        </div>
-        <div id="profile" class="tab-pane fade">
-        </div>
-        <div id="progress" class="tab-pane fade">
-        </div>
       </div>
+      <div id="activities" class="tab-pane fade"></div>
+      <div id="profile" class="tab-pane fade"></div>
+      <div id="progress" class="tab-pane fade"></div>
     </div>
-    <div class="clearfix"> </div>
   </div>
 </div>

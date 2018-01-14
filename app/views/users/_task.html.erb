@@ -5,11 +5,11 @@
     <th>
       <center>
         <% if get_user_task(params[:id], task.id).blank? %>
-          <span class="label label-primary"><%= t".init" %></span>
+          <span class="label label-primary status-task"><%= t".init" %></span>
         <% elsif get_user_task(params[:id], task.id).done? %>
-          <span class="label label-danger"><%= t".finished" %></span>
+          <span class="label label-danger status-task"><%= t".finished" %></span>
         <% else get_user_task(params[:id], task.id).doing? %>
-          <span class="label label-success"><%= t".in_progress" %></span>
+          <span class="label label-success status-task"><%= t".in_progress" %></span>
         <% end %>
       </center>
     </th>

@@ -153,7 +153,7 @@ en:
     index:
       title: "All users"
     show:
-      edit: "Edit:"
+      edit: "    edit"
       profile: "Profile User:"
       name: "Full name:"
       email: "email:"
