@@ -1,1 +1,1 @@
-$('#new_user_task_<%= @task_id %>').html('<%= j(render('subjects/finish_task', locals: {user_task: @user_task, subject_id: @subject.id, course_id: @course.id})) %>');
+$('#new_user_task_<%= @task_id %>').replaceWith('<%= j(render('subjects/finish_task', locals: {user_task: @user_task, subject_id: @subject.id, course_id: @course.id})) %>');

@@ -2,14 +2,20 @@ class SubjectsController < ApplicationController
   before_action :load_subject, except: %i(create new index)
 
   def index
-    @subjects = Subject.created_desc.page(params[:page]).per_page(Settings.subjects.per_page)
-    load_course if params[:course_id]
-    return unless @course
-    @subjects = @course.subjects.created_desc.page(params[:page])
-      .per_page(Settings.subjects.per_page)
+    @course_current=Course.first
+    @user=@course_current.user_courses.includes(:user)
+    @subject=Subject.first
+  end
+
+  def load_info_chart
+    @course_current = Course.find_by id: params[:course_id]
+    @subject_current = Subject.find_by id: params[:id]
+    @user = @course_current.user_courses.includes(:user)
   end
 
   def show
+    load_info_chart
+
     @tasks = @subject.tasks
   end
 
