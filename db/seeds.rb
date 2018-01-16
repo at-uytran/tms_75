@@ -14,7 +14,7 @@ User.create!(name: "Tran Van Uy",
 50.times do |n|
   Course.create!(name: "Example Course #{n+1}",
                  description: "lorem ipsum #{n+1}",
-                 status: 1,
+                 status: 0,
                  start_at: Time.zone.now,
                  end_at: Time.zone.now)
 
