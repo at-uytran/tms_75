@@ -1,0 +1,2 @@
+$('#edit_user_subject_<%= @user_subject.id %>').html('<%= j(render partial: 'subjects/finish_subject', object: @user_subject) %>');
+$('.status').replaceWith('<div class="status subject-status-<%= @user_subject.status %>"><p><%= @user_subject.status %></p></div>');

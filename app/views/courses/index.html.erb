@@ -1,26 +1,9 @@
 <% provide :title, t("courses.title") %>
 <h1><% t ".title" %></h1>
-<%= will_paginate %>
 <div class="w3ls_w3l_banner_nav_right_grid_head_grids">
   <div class="content">
     <%= render partial: "courses", collection: @user_courses, as: :user_course %>
   </div>
   <div class="clearfix"></div>
   <%= will_paginate @user_courses %>
-  <% @courses.each do |course| %>
-    <div class="col-md-4 w3ls_w3l_banner_nav_right_grid_head_grid">
-      <%= picture_for course %>
-      <h4><%= link_to course.name, course %> </h4>
-      <ul>
-        <li><%= course.description %></li>
-        <li><%= course.created_at %></li>
-        <li><% if course.in_progress? %><b><%= t".in_progress" %></b>
-          <% elsif course.finished? %><b><%= t".finished" %></b>
-          <% elsif course.finish? %><b><%= t".finished" %></b>
-          <% end %>
-        </li>
-      </ul>
-    </div>
-  <% end %>
-  <div class="clearfix"> </div>
 </div>

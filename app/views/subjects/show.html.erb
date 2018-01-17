@@ -1,11 +1,15 @@
 <% provide :title, t(".title") %>
 <div class="row">
-  <aside class="col-md-12">
-    <section class="subject_info">
-      <h1>
-        <% @subject.name %>
-      </h1>
-      <p><% @subject.description %></p><br>
+  <div class="container">
+    <aside class="col-md-4">
+      <section class="subject_info">
+        <h1>
+          <%= @user_subject.subject_name %>
+        </h1>
+        <div class="status subject-status-<%= @user_subject.status %>">
+          <p><%= @user_subject.status %></p>
+        </div>
+        <p><%= @user_subject.subject_description %></p><br>
       <ul class="list-group">
         <% @tasks.each do |task| %>
           <% @user_task = get_user_task(current_user.id, task.id) %>
@@ -29,6 +33,10 @@
           </div>
         <% end %>
       </ul>
-    </section>
-  </aside>
+      </section>
+    </aside>
+    <div class="col-md-8 finish-subject">
+      <%= render "finish_subject", object: @user_subject %>
+    </div>
+  </div>
 </div>

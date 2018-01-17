@@ -1,0 +1,10 @@
+<% if @user_subject.init? %>
+  <%= form_for @user_subject, remote: true do |f|  %>
+    <%= f.hidden_field :status, value: "finished" %>
+
+    <%= f.submit t(".btn_finish"), class: "btn btn-success",
+      data: {confirm: t("subjects.index.confirm_delete")} %>
+  <% end %>
+<% else %>
+  <p><%= @user_subject.status %></p>
+<% end %>

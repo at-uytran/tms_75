@@ -9,21 +9,37 @@
     <link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
   </head>
-  <body>
+  <body class="hold-transition skin-blue sidebar-mini">
     <%= render "layouts/header" %>
-    <div class="w3l_banner_nav_left">
+    <div class="wrapper">
       <%= render "shared/sidebar" %>
-    </div>
-    <div class="w3l_banner_nav_right">
-      <div class="container">
-        <% flash.each do |message_type, message| %>
-          <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-        <% end %>
-        <%= yield %>
-        <div class="alert alert-popup" role="alert" ></div>
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            Dashboard
+            <small>Control panel</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Dashboard</li>
+          </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+          <% flash.each do |message_type, message| %>
+            <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+          <% end %>
+          <%= yield %>
+          <div class="alert alert-popup" role="alert" ></div>
+        </section>
       </div>
     </div>
-    <div class="clearfix"></div>
-    <%= render "layouts/footer" %>
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs">
+        <%= render "layouts/footer" %>
+      </div>
+    </footer>
   </body>
 </html>

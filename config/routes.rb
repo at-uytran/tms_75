@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   resources :user_courses, only: %i(update)
   resources :subjects
   resources :user_tasks, only: %i(new create update)
+  resources :user_subjects, only: %i(update)
 end

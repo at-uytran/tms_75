@@ -258,6 +258,8 @@ en:
     load_subject:
       not_found: "Could not found Subject"
     title: "Subject"
+    finish_subject:
+      btn_finish: "finish"
     show:
       title: "Subjects"
     index:

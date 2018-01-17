@@ -1,9 +1,7 @@
-<div class="agileits_header">
-  <div class="container">
-    <div class="w3l_offers")>
+  <header class="main-header">
+
+
       <h1> <%= link_to(t(".framgia").html_safe, root_path) %></h1>
-    </div>
-    <div class="w3l_header_right1">
       <ul>
       <% if logged_in? %>
         <%= link_to image_tag(current_user.picture, class: "img-mini-avatar"), current_user %>
@@ -27,7 +25,4 @@
           <li><%= link_to t(".log_in"), login_path %></li>
         <% end %>
       </ul>
-    </div>
-    <div class="clearfix"> </div>
-  </div>
-</div>
+</header>

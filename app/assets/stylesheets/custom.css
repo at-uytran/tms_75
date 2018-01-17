@@ -227,3 +227,21 @@ footer {
 .img-circle {
   border-radius: 50%;
 }
+
+.subject-status-init p {
+  background-color: green;
+  display: inline-block;
+}
+
+.subject-status-finished p {
+  background-color: red;
+  display: inline-block;
+}
+
+.finish-subject .btn {
+  float: right;
+}
+
+.finish-subject p {
+  float: right;
+}
