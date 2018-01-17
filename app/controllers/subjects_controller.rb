@@ -1,5 +1,6 @@
 class SubjectsController < ApplicationController
   before_action :load_subject, except: %i(create new index)
+  before_action :load_info_chart, only: %i(show)
 
   def index
     @subjects = Subject.created_desc.page(params[:page]).per_page(Settings.subjects.per_page)
@@ -67,5 +68,11 @@ class SubjectsController < ApplicationController
     return if @subject
     flash[:danger] = I18n.t "courses.load_subject.not_found"
     redirect_to root_path
+  end
+
+  def load_info_chart
+    @course_current = Course.find_by id: params[:course_id]
+    @subject_current = Subject.find_by id: params[:id]
+    @user = @course_current.user_courses.includes(:user)
   end
 end
