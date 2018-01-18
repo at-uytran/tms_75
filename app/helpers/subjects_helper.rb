@@ -11,7 +11,7 @@ module SubjectsHelper
     data_chart = {}
     users.each do |user|
       name = get_name_user user
-      sum = subject.user_tasks.get_tasks_user(Settings.status_done,user.user_id).size
+      sum = subject.user_tasks.get_tasks_user(Settings.status_done, user.user_id).size
       data_chart[name] = sum
     end
     data_chart

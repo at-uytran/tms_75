@@ -1,0 +1,18 @@
+<div class="col-md-12 btn-new-course">
+  <%= link_to t(".create"), new_supervisor_subject_path, class: "btn btn-success" %>
+</div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th><%= t".name" %></th>
+      <th><%= t".description" %></th>
+      <th><%= t".duration" %></th>
+      <th><%= t".option" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @subjects %>
+  </tbody>
+</table>
+<%= will_paginate %>

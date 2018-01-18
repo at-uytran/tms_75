@@ -9,6 +9,7 @@
       <li><%= link_to t("courses.title"), supervisor_courses_path %></a></li>
       <% if logged_in? %>
         <li><%= link_to t(".users"), supervisor_users_path %></li>
+        <li><%= link_to t(".Subject"), supervisor_subjects_path %></li>
       <% end %>
     </ul>
   </div>

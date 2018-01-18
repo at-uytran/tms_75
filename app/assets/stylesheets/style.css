@@ -1610,6 +1610,7 @@ li.list-group-item1 {
 	padding:2em 0;
 }
 .grid_5 h3, .grid_5 h2, .grid_5 h1, .grid_5 h4, .grid_5 h5, h3.hdg, h3.bars {
+    padding-left: 30px;
 	margin-bottom: 1em;
     color:#FA1818;
 }

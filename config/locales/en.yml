@@ -56,6 +56,11 @@ en:
         log_out: "Log out"
       footer:
         des: "2018 TMS for supervisors"
+    subject:
+      show:
+        name: "Name Subject: "
+        description: "Information details"
+        duration: "duration"
     courses:
       course:
         update: "update"

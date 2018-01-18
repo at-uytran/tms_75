@@ -1,0 +1,10 @@
+<%= form_for([:supervisor, @subject.tasks.build]) do |g| %>
+
+  <%= g.label :name %>
+  <%= g.text_field :name, class: "form-control" %>
+
+  <%= g.label :description %>
+  <%= g.text_area  :description, class: "form-control", rows: 5 %>
+
+  <%= g.submit "init", class: "btn btn-primary" %>
+<% end %>
