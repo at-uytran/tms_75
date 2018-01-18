@@ -1,9 +1,4 @@
 <% provide :title, t("courses.title") %>
 <h1><% t ".title" %></h1>
-<div class="w3ls_w3l_banner_nav_right_grid_head_grids">
-  <div class="content">
-    <%= render partial: "courses", collection: @user_courses, as: :user_course %>
-  </div>
-  <div class="clearfix"></div>
-  <%= will_paginate @user_courses %>
-</div>
+<%= render partial: "courses", collection: @user_courses, as: :user_course %>
+<%= will_paginate @user_courses %>

@@ -1,28 +1,52 @@
   <header class="main-header">
-
-
-      <h1> <%= link_to(t(".framgia").html_safe, root_path) %></h1>
-      <ul>
-      <% if logged_in? %>
-        <%= link_to image_tag(current_user.picture, class: "img-mini-avatar"), current_user %>
-        <li class="dropdown profile_details_drop">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <i class="fa fa-user" aria-hidden="true"><%= t".account" %>
-          </i><span class="caret"></span></a>
-          <div class="mega-dropdown-menu">
-            <div class="w3ls_vegetables">
-              <ul class="dropdown-menu drp-mnu">
-                <li><%= link_to t(".profile"), current_user %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to t(".log_out"), logout_path, method: :delete %>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <% else %>
-          <li><%= link_to t(".log_in"), login_path %></li>
-        <% end %>
-      </ul>
-</header>
+    <!-- Logo -->
+    <a href="index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>A</b>LT</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Framgia</b>TMS</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <% if logged_in? %>
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <%= image_tag current_user.picture, class: "user-image" %>
+              <span class="hidden-xs"><%= current_user.name %></span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <%= image_tag current_user.picture, class: "img-circle" %>
+                <p>
+                  <%= current_user.name %>
+                  <small><%= current_user.roles %></small>
+                </p>
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <%= link_to t(".profile"), current_user, class: "btn btn-default btn-flat" %>
+                </div>
+                <div class="pull-right">
+                  <%= link_to t(".log_out"), logout_path, method: :delete, class: "btn btn-default btn-flat" %>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <% end %>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
