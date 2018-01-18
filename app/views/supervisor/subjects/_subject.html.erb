@@ -1,0 +1,17 @@
+<tr>
+  <td><%= image_tag subject.picture, class: "img-circle" %></td>
+  <td><%= link_to subject.name, supervisor_subject_path(subject) %></td>
+  <td>
+    <div class="start-stop-course">
+      <p><%= subject.description %></p>
+    </div>
+  </td>
+  <td><%= subject.duration %></td>
+  <td>
+    <% if current_user.admin? || current_user.trainer? %>
+      <%= link_to t(".update"), edit_supervisor_subject_path(subject) %> |
+      <%= link_to t("courses.index.delete"), supervisor_subject_path(subject),
+        method: :delete, data: {confirm: t("courses.index.confirm_delete")} %>
+    <% end %>
+  </td>
+</tr>

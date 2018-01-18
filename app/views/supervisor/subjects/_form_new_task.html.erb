@@ -1,0 +1,13 @@
+<%= form_for([:supervisor, @new_task]) do |f| %>
+  <%= f.hidden_field :subject_id, value: @subject.id %>
+
+  <%= hidden_field_tag :subject_id, @subject.id %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label :description %>
+  <%= f.text_area  :description, class: "form-control", rows: 5 %>
+
+  <%= f.submit "init", class: "btn btn-primary" %>
+<% end %>

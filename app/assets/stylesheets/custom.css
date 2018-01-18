@@ -328,3 +328,24 @@ footer {
   background-color: #f5f3ea;
   border-radius: 10px;
 }
+
+.subject_info{
+  padding: 10px;
+  margin: 10px;
+  background-color: #ececf8;
+  border: solid black 1px;
+  border-radius: 5px;
+}
+
+.subject_info ul{
+  list-style-type: none;
+  text-align: left;
+}
+
+.list-task-subject{
+  background-color: #ececf8;
+  border: solid black 1px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 50px;
+}

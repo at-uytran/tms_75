@@ -1,0 +1,20 @@
+<div class="col-md-7">
+  <% @tasks.each do |task| %>
+    <li>
+      <%= link_to task.name, @task %> |
+      <%= link_to t("subjects.index.delete"), supervisor_task_path(task),
+        method: :delete, data: {confirm: t("subjects.index.confirm_delete")} %> |
+      <%= link_to t("subjects.index.update"), edit_supervisor_task_path(task)%>
+    </li>
+  <% end %>
+</div>
+
+<div class="col-md-5">
+  <div class="col-md-12">
+    <%= render "form" %>
+  </div>
+  <h1></h1>
+<div class="col-md-12">
+    <%= render "form_new_task" %>
+  </div>
+</div>

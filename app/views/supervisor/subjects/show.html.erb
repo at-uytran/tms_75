@@ -1,0 +1,26 @@
+<% provide :title, @subject.name %>
+<div class="col-md-6 subject_info">
+  <ul>
+    <li><%= image_tag @subject.picture, class: "img-circle" %>
+    </li>
+    <li><%= t".name" %><h4><%= @subject.name %></h4>
+    </li>
+    <li><%= t".description" %><h4><%= @subject.description %></h4>
+    </li>
+    <li><%= t".duration" %><%= @subject.duration %>
+    </li>
+  </ul>
+  <ul>
+  <li><center><button type="button" >
+  <i class="fa fa-pencil" ><%= link_to t(".edit"), edit_supervisor_subject_path(@subject) %></i></button></center></li>
+</ul>
+</div>
+
+<div class="col-md-5 list-task-subject">
+  <h3 class="bars">List Tasks</h3>
+  <ol>
+  <% @tasks.each do |task|%>
+    <li class="list-group-item1"><h4><%= link_to task.name, supervisor_task_path(task) %></h4></li>
+  <% end %>
+  </ol>
+</div>

@@ -16,4 +16,8 @@ class Subject < ApplicationRecord
     return unless picture.size > Settings.picture_size.megabytes
     errors.add(:picture, I18n.t(".Max_size_picure"))
   end
+
+  def add_task name, description, subject_id
+    tasks.create(name: name, description: description, subject_id: subject_id)
+  end
 end
