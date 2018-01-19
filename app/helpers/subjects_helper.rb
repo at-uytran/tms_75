@@ -11,6 +11,7 @@ module SubjectsHelper
     data_chart = {}
     users.each do |user|
       name = get_name_user user
+      return if name == false
       sum = subject.user_tasks.get_tasks_user(Settings.status_done, user.user_id).size
       data_chart[name] = sum
     end
@@ -27,6 +28,7 @@ module SubjectsHelper
 
   def get_name_user user
     user = User.find_by(id: user.user_id)
+    return false if user.roles==1
     return user.name if user
     Settings.name_default
   end

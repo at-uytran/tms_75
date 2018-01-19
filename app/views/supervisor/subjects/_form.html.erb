@@ -8,11 +8,11 @@
   <%= f.text_area  :description, class: "form-control", rows: Settings.area_size %>
 
   <%= f.label :duration %>
-  <%= f.number_field :duration, class: "form-control" %>
+  <%= f.number_field :duration, class: "form-control number-field" %>
 
   <span class="picture">
     <%= f.file_field :picture %>
   </span>
 
-  <%= f.submit "Button", class: "btn btn-primary" %>
+  <center><%= f.submit t(".button"), class: "btn btn-primary button-subject" %></center>
 <% end %>

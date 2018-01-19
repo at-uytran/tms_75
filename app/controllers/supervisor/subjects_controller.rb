@@ -28,6 +28,7 @@ module Supervisor
     end
 
     def edit
+      @new_task = Task.new
       @tasks = @subject.tasks
     end
 

@@ -77,7 +77,21 @@ en:
           manage_users: "Manage users"
           manage_courses: "Manage courses"
           manage_subjects: "Manage subjects"
-    subject:
+    tasks:
+      form:
+        update: "Update"
+      edit:
+        title: "Edit Task"
+        button: "Update"
+    subjects:
+      edit:
+        list_tasks: "List Tasks"
+        add_tasks: "Add Task"
+        edit_subject: "Edit Subject"
+      form:
+        button: "Edit Subject"
+      form_new_task:
+        init: "Create Task"
       show:
         name: "Name Subject: "
         description: "Information details"
@@ -285,6 +299,8 @@ en:
       pl_login: "Please login"
       update_success: "Profile updated"
   subjects:
+    load_subject:
+      not_found: "Couldn't find"
     finish_task:
       doing: "In Progress"
     receive_task:
@@ -298,6 +314,7 @@ en:
       failed: "Update failed"
     destroy:
       success: "Deleted"
+      failed: "Failed"
     load_subject:
       not_found: "Could not found Subject"
     title: "Subject"
@@ -331,6 +348,7 @@ en:
       failed: "Update failed"
     destroy:
       success: "Deleted"
+      failed: "Failed"
     load_subject:
       not_found: "Could not found Subject"
     create:

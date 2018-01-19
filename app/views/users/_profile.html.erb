@@ -1,4 +1,11 @@
 <center><%= picture_for @user %></center>
+<div class="edit-user">
+  <% if @check %>
+      <%= link_to edit_user_path(@user) do %>
+        <i class="fa fa-pencil" ></i>
+      <% end %>
+  <% end %>
+</div>
 <ul>
   <li><%= t".name" %><h4><span><%= @user.name %></span></h4></li>
 </ul>
@@ -11,9 +18,4 @@
 <ul>
   <li><%= t".school" %><h4><span><%= @user.school %></span></h4></li>
 </ul>
-<% if @check %>
-<ul>
-  <li><center><button type="button" >
-  <i class="fa fa-pencil" ><%= link_to t(".edit"), edit_user_path(@user) %></i></button></center></li>
-</ul>
-<% end %>
+
