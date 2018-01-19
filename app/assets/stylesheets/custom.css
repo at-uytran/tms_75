@@ -411,6 +411,7 @@
   height: 100px;
   float: left;
 }
+
 .picture_nomal img{
   border-radius: 50%;
 }
@@ -422,4 +423,21 @@
 
 .picture_nomal_subject img{
   border-radius: 50%;
+}
+
+/* status badge */
+.in_progress {
+  background-color: green;
+}
+
+.finished {
+  background-color: #ff471a;
+}
+
+.init {
+  background-color: #ffff4d;
+}
+
+.joined {
+  background-color: #ffff4d;
 }

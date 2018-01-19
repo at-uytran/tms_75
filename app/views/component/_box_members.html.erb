@@ -8,13 +8,8 @@
       <h4><%= t ".trainers" %></h4>
     </div>
     <ul class="box-list-trainer">
-      <% if @trainers.size > Settings.size_more %>
-        <%= render partial: "component/many_trainers", object: @trainers %>
-      <% else %>
-        <%= render partial: "component/trainers", collection: @trainers, as: :trainer %>
-      <% end %>
+      <%= render partial: "component/trainers", object: @trainers %>
     </ul>
-
     <div class="box-header with-border">
       <h4><%= t ".traines" %></h4>
     </div>
