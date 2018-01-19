@@ -298,13 +298,24 @@
 .subject_info{
   padding: 10px;
   margin: 0px 0px 0px 10px;;
+<<<<<<< 1a23544d3e8adecd54c46a34db46f0762ae15cca
+  background-color: #ececf8;
+  border-radius: 5px;
+}
+
+.list-task-subject{
+=======
+>>>>>>> add-task-for-subject
   background-color: #ececf8;
   border-radius: 5px;
 }
 
 .list-task-subject{
   background-color: #ececf8;
+  border: solid black 1px;
   border-radius: 5px;
+  padding: 10px;
+  margin-left: 50px;
 }
 
 .subject_info ul{
@@ -316,7 +327,12 @@
   background-color: #ececf8;
   border: solid black 1px;
   border-radius: 5px;
+<<<<<<< 1a23544d3e8adecd54c46a34db46f0762ae15cca
 
+=======
+  padding: 10px;
+  margin-left: 10px;
+>>>>>>> add-task-for-subject
 }
 
 .list_task_info ul{
@@ -341,6 +357,8 @@
 
 .edit_subject_info{
   margin-top: 10px;
+  padding: 10px;
+  margin: 10px 0px 0px 10px;;
   background-color: #ececf8;
   border: solid black 1px;
   border-radius: 5px;
@@ -357,6 +375,7 @@
 
 .button-init{
   background-color: #00CC00 !important;
+
 }
 
 /* status badge */

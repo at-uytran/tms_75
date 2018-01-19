@@ -47,8 +47,7 @@ module Supervisor
     end
 
     def load_current_subject
-      @subject_id = params[:subject_id]
-      @subject = Subject.find_by id: @subject_id
+      @subject = Subject.find_by id: params[:subject_id]
       return if @subject
       flash[:danger] = t "tasks.load_subject.not_found"
       redirect_to supervisor_courses_path

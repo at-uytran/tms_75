@@ -28,7 +28,7 @@ module SubjectsHelper
 
   def get_name_user user
     user = User.find_by(id: user.user_id)
-    return false if user.roles==1
+    return false if user.trainer?
     return user.name if user
     Settings.name_default
   end
