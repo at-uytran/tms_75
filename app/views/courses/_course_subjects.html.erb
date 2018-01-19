@@ -4,7 +4,7 @@
       <%= start_date course_subject %>
     </span>
     <div class="show-subject">
-      <%= image_tag course_subject.subject_picture.url, class: "subject-img-circle" %>
+      <%= link_to image_tag(course_subject.subject_picture.url, class: "subject-img-circle"), course_subject.subject %>
       <%= link_to course_subject.subject_name, [course_subject.course, course_subject.subject] %>
       <%= t(".alltime", time: course_subject.subject_duration) %>
       <div class="agile_top_brand_left_grid1">

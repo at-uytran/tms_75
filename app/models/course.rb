@@ -10,6 +10,7 @@ class Course < ApplicationRecord
   validate  :picture_size
   mount_uploader :picture, PictureUploader
 
+  scope :search, ->(key){where("name LIKE ?", "%#{key}%")}
   scope :total_size, ->{all.size}
   scope :total_init_size, ->{init.size}
   scope :total_in_progress_size, ->{in_progress.size}
