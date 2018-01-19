@@ -306,15 +306,10 @@
 
 .subject_info{
   padding: 10px;
-  margin: 10px;
+  margin: 0px 0px 0px 10px;;
   background-color: #ececf8;
   border: solid black 1px;
   border-radius: 5px;
-}
-
-.subject_info ul{
-  list-style-type: none;
-  text-align: left;
 }
 
 .list-task-subject{
@@ -323,6 +318,56 @@
   border-radius: 5px;
   padding: 10px;
   margin-left: 50px;
+}
+
+.subject_info ul{
+  list-style-type: none;
+  text-align: left;
+}
+
+.list_task_info{
+  background-color: #ececf8;
+  border: solid black 1px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.list_task_info ul{
+  list-style-type: none;
+  text-align: left;
+}
+
+.button-subject{
+  border-radius: 10px !important;
+  margin-top: 10px;
+}
+
+.number-field{
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.edit-user{
+  float: right;
+  margin-right: 30px;
+}
+
+.edit_subject_info{
+  padding: 10px;
+  margin: 10px 0px 0px 10px;;
+  background-color: #ececf8;
+  border: solid black 1px;
+  border-radius: 5px;
+}
+.edit_subject_info ul{
+  list-style-type: none;
+  text-align: left;
+}
+
+.content_task{
+  color: #b5b2b2;
+  font-size: 15px;
 }
 
 .picture_nomal{

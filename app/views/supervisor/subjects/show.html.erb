@@ -14,7 +14,7 @@
   </ul>
 </div>
 <div class="col-md-5 list-task-subject">
-  <h3 class="bars">List Tasks</h3>
+  <h3 class="bars"><%= t".List_tasks" %></h3>
   <ol>
   <% @tasks.each do |task|%>
     <li class="list-group-item1"><h4><%= link_to task.name,
