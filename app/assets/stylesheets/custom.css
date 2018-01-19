@@ -214,6 +214,11 @@
   display: inline-block;
 }
 
+
+.finish-subject {
+  float: right;
+}
+
 .finish-subject .btn {
   float: right;
 }
@@ -298,8 +303,6 @@
 }
 
 .chart-progress-task{
-  padding: 20px;
-  margin: 0px 20px 50px 80px;
   background-color: #f5f3ea;
   border-radius: 10px;
 }
@@ -330,6 +333,7 @@
   height: 100px;
   float: left;
 }
+
 .picture_nomal img{
   border-radius: 50%;
 }
@@ -341,4 +345,21 @@
 
 .picture_nomal_subject img{
   border-radius: 50%;
+}
+
+/* status badge */
+.in_progress {
+  background-color: green;
+}
+
+.finished {
+  background-color: #ff471a;
+}
+
+.init {
+  background-color: #ffff4d;
+}
+
+.joined {
+  background-color: #ffff4d;
 }

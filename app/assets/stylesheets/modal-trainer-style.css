@@ -1,0 +1,61 @@
+.list-trainers {
+  list-style: none;
+  display: inline-block;
+}
+
+.list-trainers li{
+  float: left;
+}
+
+.box-list-trainer {
+  margin-top: 10px;
+  list-style: none;
+  display: inline-block;
+}
+
+.box-list-trainee {
+  margin-top: 10px;
+  list-style: none;
+  display: inline-block;
+}
+
+.box-list-trainee li {
+  margin-bottom: 10px;
+}
+
+.box-list-trainer li {
+  float: left;
+}
+
+.box-list-trainer img {
+  margin-right: 10px;
+}
+
+.content {
+  list-style: none;
+  display: inline-block;
+}
+
+.content .trainers-item {
+  color: darkgreen;
+  background-color: #f4f8fa;
+  float: left;
+  padding: 15px;
+  margin: 5px;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #ebebeb;
+  width: 32%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-top: 0px;
+}
+
+.trainers-item img{
+  float: left;
+}
+
+.trainers-item span{
+  padding: 10px;
+  float: right;
+}

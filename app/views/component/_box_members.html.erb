@@ -1,0 +1,22 @@
+<div class="box">
+  <div class="box-header with-border box-header-gray">
+    <h3 class="box-title"><%= t ".members" %></h3>
+    <span class="label label-primary"><%= @total %></span>
+  </div>
+  <div class="box-body">
+    <div class="box-header with-border">
+      <h4><%= t ".trainers" %></h4>
+    </div>
+    <ul class="box-list-trainer">
+      <%= render partial: "component/trainers", object: @trainers %>
+    </ul>
+    <div class="box-header with-border">
+      <h4><%= t ".traines" %></h4>
+    </div>
+    <ul class="box-list-trainee">
+      <%= render partial: "component/trainees", collection: @trainees, as: :trainee %>
+    </ul>
+  </div>
+  <div class="box-footer">
+  </div>
+</div>

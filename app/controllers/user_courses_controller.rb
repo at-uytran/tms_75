@@ -19,6 +19,7 @@ class UserCoursesController < ApplicationController
   private
 
   def update_status
+    @user_course.update user_course_params
     respond_to do |format|
       format.html{redirect_back fallback_location: @user_course.course}
       format.js
