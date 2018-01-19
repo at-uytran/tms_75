@@ -1,18 +1,25 @@
+<div class="col-md-6 list-task-subject">
+  <h3 class="bars"><%= t".list_tasks" %></h3>
+  <ol>
+  <% @tasks.each do |task|%>
+    <li class="list-group-item1">
+      <%= task.name %>
+      <%= link_to t("subjects.index.delete"), supervisor_task_path(task),
+        method: :delete, data: {confirm: t("subjects.index.confirm_delete")} %>
+      <%= link_to t("subjects.index.update"), edit_supervisor_task_path(task)%>
+    </li>
+      <i class="content_task"><%= task.description %></i>
+  <% end %>
+  </ol>
+</div>
 
 <div class="col-md-5">
-  <div class="col-md-12">
+  <div class="col-md-12 list_task_info">
+    <center><h2><%= t".add_tasks" %></h2></center>
+    <%= render "form_new_task" %>
+  </div>
+  <div class="col-md-12 edit_subject_info">
+  <center><h2><%= t".edit_subject" %></h2></center>
     <%= render "form" %>
   </div>
-</div>
-<div class="col-md-7">
-  <% @tasks.each do |task| %>
-    <li>
-      <%= link_to task.name, @task %>
-      <% if current_user.admin? || current_user.trainer? %>
-        <%= link_to t("tasks.index.delete"), supervisor_task_path(task),
-          method: :delete, data: {confirm: t("tasks.index.confirm_delete")} %> |
-        <%= link_to t("tasks.index.update"), edit_supervisor_task_path(task)%>
-      <% end %>
-    </li>
-  <% end %>
 </div>

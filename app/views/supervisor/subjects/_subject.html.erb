@@ -9,7 +9,7 @@
   <td><%= subject.duration %></td>
   <td>
     <% if current_user.admin? || current_user.trainer? %>
-      <%= link_to t(".update"), edit_supervisor_subject_path(subject) %> |
+      <%= link_to t(".update"), edit_supervisor_subject_path(subject) %>
       <%= link_to t("courses.index.delete"), supervisor_subject_path(subject),
         method: :delete, data: {confirm: t("courses.index.confirm_delete")} %>
     <% end %>

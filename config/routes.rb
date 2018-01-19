@@ -9,9 +9,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   resources :users
   namespace :supervisor do
-    resources :subjects do
-      resources :tasks
-    end
+    resources :subjects
     resources :courses
     resources :course_subjects, only: %i(create update destroy)
     resources :user_courses, only: %i(create update destroy)
