@@ -7,6 +7,9 @@ class CoursesController < ApplicationController
   def index
     @user_courses = current_user.user_courses.includes(:course)
       .page(params[:page]).per_page(Settings.courses.per_page)
+    return if params[:search].blank?
+    @user_courses = current_user.user_courses.search_course(params[:search])
+      .includes(:course).page(params[:page]).per_page(Settings.courses.per_page)
   end
 
   def show

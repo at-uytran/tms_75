@@ -2,7 +2,7 @@
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 99999;
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -29,6 +29,27 @@
   animation-duration: 0.4s
 }
 
+.modal-title {
+  padding-right: 10px;
+  float: left;
+}
+
+.trainers-item img {
+  max-width: 30%;
+  float: left;
+}
+
+.trainer-info {
+  max-width: 70%;
+  float: right;
+}
+
+.modal-mini-avatar {
+  width:60px;
+  height: 60px;
+  padding-top: 10px;
+  border-radius: 5px;
+}
 /* Add Animation */
 @-webkit-keyframes animatetop {
   from {top:-300px; opacity:0}

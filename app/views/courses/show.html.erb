@@ -1,23 +1,20 @@
 <%= render "modal" %>
 <% provide :title, @course.name %>
 <div class="row">
-  <aside class="col-md-8">
-    <section class="course_info">
-    <div class="picture_nomal">
-      <%= picture_for @course %>
-    </div>
-      <div class="user-course-status">
-        <h1>
-          <%= @course.name %>
-        </h1>
-        <span class="<%= @user_course.status %>"><%= @user_course.status %></span>
-        <p><%= @course.description %></p>
+  <div class="col-md-12">
+    <div class="box">
+      <div class="box-title">
+        <%= image_tag @course.picture, class: "img img-circle pull-left", id: "myBtn" %>
+        <h3 class=""><%= @course.name %></h3>
       </div>
-    </section>
-  </aside>
-  <aside class="col-md-4">
-    <%= render "start_finish_course" %>
-  </aside>
+      <div class="box-body">
+        <span class="<%= @user_course.status %> badge"><%= @user_course.status %></span>
+        <div class="col-md-4 pull-right">
+          <%= render "start_finish_course" %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="col-md-12 agileinfo_mail_grid_right">
   <ul class="nav nav-tabs">

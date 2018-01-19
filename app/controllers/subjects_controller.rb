@@ -1,6 +1,7 @@
 class SubjectsController < ApplicationController
   before_action :load_subject, only: %i(show)
   before_action :load_info_chart, only: %i(show)
+  before_action :load_members, only: %i(show)
 
   def show
     @tasks = @subject.tasks
@@ -11,6 +12,13 @@ class SubjectsController < ApplicationController
   end
 
   private
+
+  def load_members
+    @course_current = Course.find_by id: params[:course_id]
+    @trainees = @course_current.users.trainee.alphabet
+    @trainers = @course_current.users.trainer.alphabet
+    @total = @trainees.size + @trainers.size
+  end
 
   def load_subject
     @subject = Subject.find_by id: params[:id]
