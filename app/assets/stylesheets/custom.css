@@ -214,6 +214,11 @@
   display: inline-block;
 }
 
+
+.finish-subject {
+  float: right;
+}
+
 .finish-subject .btn {
   float: right;
 }
@@ -352,4 +357,21 @@
 
 .button-init{
   background-color: #00CC00 !important;
+}
+
+/* status badge */
+.in_progress {
+  background-color: green;
+}
+
+.finished {
+  background-color: #ff471a;
+}
+
+.init {
+  background-color: #ffff4d;
+}
+
+.joined {
+  background-color: #ffff4d;
 }

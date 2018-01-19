@@ -37,7 +37,20 @@ en:
   navigation: "MAIN NAVIGATION"
   label: "LABELS"
   dashboard: "Dashboard"
+  search: "Search"
   Max_size_picure: "Maximum file size is 5MB. Please choose a smaller file."
+  bread_crumb:
+    home: "Home"
+    courses: "Courses"
+    subjects: "Subjects"
+    users: "Users"
+  component:
+    modal:
+      trainers: "Trainers"
+    box_members:
+      members: "Members"
+      trainers: "Trainers "
+      trainees: "Trainees "
   layouts:
     header:
       logo_mini: "logo-mini"

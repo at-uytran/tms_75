@@ -1,0 +1,29 @@
+<div id="myModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><%= t ".trainers" %></h4>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="page-header content">
+                  <% @trainers.each do |trainer| %>
+                    <div class="trainers-item">
+                      <%= link_to (image_tag trainer.picture, class: "img modal-mini-avatar"), trainer %>
+                      <div class="trainer-info">
+                        <span><%= trainer.name %></span>
+                        <span><h5><%= trainer.email %></h5></span>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

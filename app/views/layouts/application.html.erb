@@ -15,6 +15,16 @@
       <%= render "layouts/header" %>
       <%= render "shared/sidebar" %>
       <div class="content-wrapper">
+        <section class="content-header">
+          <h1>
+            <%= t "dashboard" %>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>
+              <%= link_to t("static_pages.home.title"), root_path %>
+            </a></li>
+          </ol>
+        </section>
         <section class="content">
           <% flash.each do |message_type, message| %>
             <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>

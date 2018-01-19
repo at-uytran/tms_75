@@ -7,6 +7,8 @@ module Supervisor
 
     def index
       @courses = Course.created_desc.page(params[:page]).per_page(Settings.courses.per_page)
+      return if params[:search].blank?
+      @courses = Course.search(params[:search]).page(params[:page]).per_page(Settings.courses.per_page)
     end
 
     def show
