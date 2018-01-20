@@ -10,9 +10,8 @@ module SubjectsHelper
   def data_chart_subject users, subject
     data_chart = {}
     users.each do |user|
-      return unless check_roles user
-      name = get_name_user
-      sum = subject.user_tasks.get_tasks_user(Settings.status_done, user.user_id).size
+      name = get_name_user user
+      sum = subject.user_tasks.get_tasks_user(Settings.status_done,user.user_id).size
       data_chart[name] = sum
     end
     data_chart
@@ -26,18 +25,9 @@ module SubjectsHelper
       ytitle:  "task complete"
   end
 
-  def check_roles user
-    get_user user
-    return true if @user.trainee?
-  end
-
-  def get_name_user
-    return @user.name if @user
+  def get_name_user user
+    user = User.find_by(id: user.user_id)
+    return user.name if user
     Settings.name_default
   end
-
-  def get_user user
-    @user = User.find_by(id: user.user_id)
-  end
-
 end

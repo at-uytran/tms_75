@@ -8,7 +8,8 @@ module Supervisor
     def index
       @courses = Course.created_desc.page(params[:page]).per_page(Settings.courses.per_page)
       return if params[:search].blank?
-      @courses = Course.search(params[:search]).page(params[:page]).per_page(Settings.courses.per_page)
+      @courses = current_user.courses.search(params[:search])
+        .page(params[:page]).per_page(Settings.courses.per_page)
     end
 
     def show
@@ -78,7 +79,7 @@ module Supervisor
 
     def load_subjects course
       @subjects = course.subjects
-      @all_subjects = Subject.all.page(params[:page]).per_page(Settings.courses.per_page)
+      @all_subjects = Subject.all
     end
 
     def load_trainers course
@@ -90,8 +91,8 @@ module Supervisor
     end
 
     def load_all_users
-      @trainers = User.trainer.alphabet.page(params[:page]).per_page(Settings.courses.per_page)
-      @trainees = User.trainee.alphabet.page(params[:page]).per_page(Settings.courses.per_page)
+      @trainers = User.trainer.alphabet
+      @trainees = User.trainee.alphabet
     end
   end
 end

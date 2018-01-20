@@ -86,23 +86,12 @@
 .timeline,
 .timeline-horizontal {
   list-style: none;
-  padding: 20px;
+  padding: 2px;
   position: relative;
 }
 
-.timeline:before {
-  top: 40px;
-  bottom: 0;
-  position: absolute;
-  content: " ";
-  width: 3px;
-  background-color: #eeeeee;
-  left: 50%;
-  margin-left: -1.5px;
-}
-
 .timeline .timeline-item {
-  margin-bottom: 20px;
+  margin-bottom: -9px;
   position: relative;
 }
 
@@ -288,4 +277,8 @@
 .course_info .user-course-status {
   padding-left: 10px;
   display: inline-block;
+}
+
+.timeline > .time-label > span {
+  margin-left: -60px;
 }

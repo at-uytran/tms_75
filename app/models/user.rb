@@ -21,6 +21,7 @@ class User < ApplicationRecord
 
   mount_uploader :picture, PictureUploader
 
+  scope :search, ->(key){where("name LIKE ?", "%#{key}%")}
   scope :desc_created_at, ->{order(created_at: :desc)}
   scope :alphabet, ->{order(name: :desc)}
 

@@ -8,6 +8,8 @@ class Course < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
   validate  :picture_size
+  validates_presence_of :start_at, :end_at
+  validate :end_date_is_after_start_date
   mount_uploader :picture, PictureUploader
 
   scope :search, ->(key){where("name LIKE ?", "%#{key}%")}
@@ -17,6 +19,13 @@ class Course < ApplicationRecord
   scope :total_finished_size, ->{finished.size}
   scope :created_desc, ->{order(created_at: :desc)}
   enum status: {init: 0, in_progress: 1, finished: 2}
+
+  def end_date_is_after_start_date
+    return if end_at.blank? || start_at.blank?
+    if end_at < start_at
+      errors.add(:end_at, I18n.t("date_validate"))
+    end
+  end
 
   def picture_size
     return unless picture.size > Settings.picture_size.megabytes

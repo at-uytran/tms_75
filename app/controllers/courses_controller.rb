@@ -3,7 +3,6 @@ class CoursesController < ApplicationController
   before_action :load_subjects, only: %i(show)
   before_action :load_members, only: %i(show)
   before_action :logged_in_user
-  add_breadcrumb I18n.t("bread_crumb.courses"), :courses_path
 
   def index
     @user_courses = current_user.user_courses.includes(:course)
