@@ -20,11 +20,14 @@
       <tr>
         <th style="width: 10px">#</th>
         <th><%= t".task" %></th>
+        <th><%= t".description" %></th>
       </tr>
     <% @tasks.each do |task|%>
       <tr>
         <th><%= stt+=1 %></th>
         <th><%= link_to task.name, supervisor_task_path(task) %></th>
+        <th><%= task.name %></th>
+         <th><%= task.description %></th>
       </tr>
     <% end %>
     </table>
