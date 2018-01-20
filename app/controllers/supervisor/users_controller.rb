@@ -51,7 +51,7 @@ module Supervisor
 
     def user_params
       params.require(:user).permit :name, :email, :password,
-        :password_confirmation, :address, :school, :picture
+        :password_confirmation, :address, :school, :picture, :roles
     end
   end
 end

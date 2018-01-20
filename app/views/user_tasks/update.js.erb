@@ -1,1 +1,2 @@
 $('#edit_user_task_<%= @user_task.id %>').html('<%= j(render('subjects/completed')) %>');
+$('#task_<%= @user_task.task_id %>').replaceWith('<div class="col-md-1 w3agile_event_grid_left" id="task_<%= @user_task.task_id %>"><%= get_status @user_task %></div>');

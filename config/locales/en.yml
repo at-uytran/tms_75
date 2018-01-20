@@ -93,6 +93,7 @@ en:
       form_new_task:
         init: "Create Task"
       show:
+        day: " days"
         name: "Name Subject: "
         description: "Information details"
         duration: "duration"
@@ -185,11 +186,8 @@ en:
       show:
         edit: "Edit"
       edit:
-        title: "Edit"
-        str: "Edit"
-      form:
+        title: "Edit User"
         button_text: "Edit"
-
   static_pages:
     home:
       title: "Home"
@@ -254,6 +252,11 @@ en:
       str2: "Remember me on this computer"
       forgot: "forgot password"
   users:
+    profile:
+      name: "Full name:"
+      email: "  Email:"
+      address: "  Address:"
+      school: "  School:"
     edit:
       title: "Edit user"
       str: "Update your profile"
@@ -265,10 +268,6 @@ en:
     show:
       edit: "Edit:"
       profile: "Profile User:"
-      name: "Full name:"
-      email: "email:"
-      address: "Address:"
-      school: "School:"
       init: "init"
       in_progress: "in progress"
       finished: "finished"
