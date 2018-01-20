@@ -9,6 +9,7 @@ class Subject < ApplicationRecord
     length: {minimum: Settings.subjects.des_min_len}
   validate  :picture_size
 
+  scope :search, ->(key){where("name LIKE ?", "%#{key}%")}
   scope :created_desc, ->{order(created_at: :desc)}
   mount_uploader :picture, PictureUploader
 

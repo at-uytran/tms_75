@@ -2,10 +2,8 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: %i(edit update)
   before_action :correct_user, only: %i(edit update)
   before_action :find_user, only: %i(show)
-  add_breadcrumb I18n.t("bread_crumb.home"), :root_path
 
   def show
-    add_breadcrumb I18n.t "bread_crumb.users", current_user
     @courses = current_user.courses.created_desc
     @check = correct_user?
   end

@@ -38,6 +38,7 @@ en:
   label: "LABELS"
   dashboard: "Dashboard"
   search: "Search"
+  date_validate: "cannot be before the start date"
   Max_size_picure: "Maximum file size is 5MB. Please choose a smaller file."
   bread_crumb:
     home: "Home"

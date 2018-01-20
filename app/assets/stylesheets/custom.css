@@ -60,19 +60,6 @@
   height: 100px;
 }
 
-/* user-course-status */
-.user-course-status .joined {
-  background-color: yellow;
-}
-
-.user-course-status .in_progress {
-  background-color: green;
-}
-
-.user-course-status .finished {
-  background-color: red;
-}
-
 .agile_top_brand_left_grid li {
   list-style: none;
   padding-bottom: 30px;
@@ -88,13 +75,6 @@
 
 .show-subject {
   padding-left: 100px;
-}
-
-.subject-border {
-  background-color: #f4f6f9;
-  border-radius: 15px 15px;
-  display: block;
-  border: 1px solid #ccc;
 }
 
 .subject-border:hover {
@@ -348,11 +328,11 @@
 }
 
 /* status badge */
-.in_progress {
+.in_progress, .started {
   background-color: green;
 }
 
-.finished {
+.finished, .stopped {
   background-color: #ff471a;
 }
 

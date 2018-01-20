@@ -7,6 +7,7 @@ class StaticPagesController < ApplicationController
         redirect_to supervisor_courses_path
       else
         redirect_to courses_path
+      end
     end
   end
 end

@@ -7,6 +7,10 @@
   <%= f.label :description %>
   <%= f.text_area  :description, class: "form-control", rows: Settings.area_size %>
 
+  <%= f.label :resources %>
+  <%= f.text_area  :resources, class: "form-control",
+    rows: Settings.area_size, cols: Settings.area_size %>
+
   <%= f.label :duration %>
   <%= f.number_field :duration, class: "form-control" %>
 
