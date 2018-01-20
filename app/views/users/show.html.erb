@@ -1,28 +1,30 @@
 <div class="view-detail-user">
-  <div class="col-sm-3 show_user">
+  <div class="col-sm-3">
     <%= render partial: "profile", object: @user %>
   </div>
-  <div class="col-md-8 agileinfo_mail_grid_right show-tasks">
-    <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">
-      <%= t"timeline." %></a></li>
-    <li><a data-toggle="tab" href="#activities"><%= t".activities" %></a></li>
-    <li><a data-toggle="tab" href="#profile"><%= t".profile" %></a></li>
-    <li><a data-toggle="tab" href="#progress"><%= t".progress" %></a></li>
-    </ul>
-    <div class="tab-content">
-      <div id="home" class="tab-pane fade in active">
-        <div class="w3ls_w3l_banner_nav_right_grid ">
-          <div class="hover14 column">
-            <% @courses.each do |course| %>
-              <%= render partial: "course", object: course %>
-            <% end %>
+  <div class="col-md-8 agileinfo_mail_grid_right box box-primary show-tasks">
+    <div class="box-body">
+      <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#home">
+        <%= t"timeline." %></a></li>
+      <li><a data-toggle="tab" href="#activities"><%= t".activities" %></a></li>
+      <li><a data-toggle="tab" href="#profile"><%= t".profile" %></a></li>
+      <li><a data-toggle="tab" href="#progress"><%= t".progress" %></a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+          <div class="w3ls_w3l_banner_nav_right_grid ">
+            <div class="hover14 column">
+              <% @courses.each do |course| %>
+                <%= render partial: "course", object: course %>
+              <% end %>
+            </div>
           </div>
         </div>
-      </div>
       <div id="activities" class="tab-pane fade"></div>
       <div id="profile" class="tab-pane fade"></div>
       <div id="progress" class="tab-pane fade"></div>
+      </div>
     </div>
   </div>
 </div>

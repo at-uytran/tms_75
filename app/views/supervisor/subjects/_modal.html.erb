@@ -1,0 +1,13 @@
+<div id="myModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <center><%= image_tag @subject.picture, class: "img-circle" %></center>
+      <h3 class="profile-username text-center"><%= @subject.name %></h3>
+      <center><p class="text-muted"><%= @subject.duration %><%= t".day" %></p></center>
+      <div><p><%= @subject.description %></p></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,21 +1,22 @@
-<center><%= picture_for @user %></center>
-<div class="edit-user">
-  <% if @check %>
-      <%= link_to edit_user_path(@user) do %>
-        <i class="fa fa-pencil" ></i>
+<div class="box box-primary show_user">
+  <div class="box-body box-profile">
+    <center><%= picture_for @user %></center>
+    <div class="edit-user">
+      <% if @check %>
+          <%= link_to edit_user_path(@user) do %>
+            <i class="fa fa-pencil" ></i>
+          <% end %>
       <% end %>
-  <% end %>
+    </div>
+    <h3 class="profile-username text-center"><%= @user.name %></h3>
+    <strong><%= fa_icon "envelope-open" %><%= t".email" %></strong>
+    <p class="text-muted"><%= @user.email %></p>
+    <strong><%= fa_icon "home" %><%= t".address" %></strong>
+    <p class="text-muted"><%= @user.address %></p>
+    <strong><%= fa_icon "university" %><%= t".school" %></strong>
+    <p class="text-muted"><%= @user.school %></p>
+  </div>
 </div>
-<ul>
-  <li><%= t".name" %><h4><span><%= @user.name %></span></h4></li>
-</ul>
-<ul>
-  <li><%= t".email" %><h4><span><%= @user.email %></span></h4></li>
-</ul>
-<ul>
-  <li><%= t".address" %><h4><span><%= @user.address %></span></h4></li>
-</ul>
-<ul>
-  <li><%= t".school" %><h4><span><%= @user.school %></span></h4></li>
-</ul>
+
+
 

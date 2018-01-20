@@ -1,25 +1,37 @@
-<div class="col-md-6 list-task-subject">
-  <h3 class="bars"><%= t".list_tasks" %></h3>
-  <ol>
-  <% @tasks.each do |task|%>
-    <li class="list-group-item1">
-      <%= task.name %>
-      <%= link_to t("subjects.index.delete"), supervisor_task_path(task),
+<div class="col-md-6 list-task-subject box box-primary">
+  <h3 class="bars"><%= t".List_tasks" %></h3>
+  <div class="box-body">
+    <table class="table table-bordered">
+    <% stt=0 %>
+      <tr>
+        <th style="width: 10px">#</th>
+        <th><%= t".task" %></th>
+        <th><%= t".description" %></th>
+        <th><%= t".option" %></th>
+      </tr>
+    <% @tasks.each do |task|%>
+      <tr>
+        <th><%= stt+=1 %></th>
+        <th><%= task.name %></th>
+        <th><%= task.description %></th>
+        <th><%= link_to t("subjects.index.delete"), supervisor_task_path(task),
         method: :delete, data: {confirm: t("subjects.index.confirm_delete")} %>
-      <%= link_to t("subjects.index.update"), edit_supervisor_task_path(task)%>
-    </li>
-      <i class="content_task"><%= task.description %></i>
-  <% end %>
-  </ol>
+      <%= link_to t("subjects.index.update"), edit_supervisor_task_path(task)%></th>
+      </tr>
+    <% end %>
+    </table>
+  </div>
 </div>
-
-<div class="col-md-5">
+<div class="col-md-6">
   <div class="col-md-12 list_task_info">
     <center><h2><%= t".add_tasks" %></h2></center>
     <%= render "form_new_task" %>
   </div>
   <div class="col-md-12 edit_subject_info">
-  <center><h2><%= t".edit_subject" %></h2></center>
+    <center><h2><%= t".edit_subject" %></h2></center>
     <%= render "form" %>
   </div>
 </div>
+
+
+

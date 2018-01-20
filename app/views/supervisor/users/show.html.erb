@@ -1,19 +1,18 @@
-<div class="col-sm-4" id="show-user-supervisor">
-  <%= picture_for @user %>
-  <ul>
-    <li><%= t".name" %><h2><span><%= @user.name %></span></h2></li>
-  </ul>
-  <ul>
-    <li><%= t".email" %><h2><span><%= @user.email %></span></h2></li>
-  </ul>
-  <ul>
-    <li><%= t".address" %><h2><span><%= @user.address %></span></h2></li>
-  </ul>
-  <ul>
-    <li><%= t".school" %><h2><span><%= @user.school %></span></h2></li>
-  </ul>
-  <ul>
-    <li><button type="button" class="btn btn-primary">
-      <%= link_to t(".edit"), edit_supervisor_user_path(@user) %></button></li>
-  </ul>
+<div class="col-sm-4 box box-primary show_user">
+  <div class="box-body box-profile">
+    <center><%= picture_for @user %></center>
+    <h3 class="profile-username text-center"><%= @user.name %></h3>
+    <strong><%= fa_icon "envelope-open" %><%= t".email" %></strong>
+    <p class="text-muted"><%= @user.email %></p>
+    <strong><%= fa_icon "home" %><%= t".address" %></strong>
+    <p class="text-muted"><%= @user.address %></p>
+    <strong><%= fa_icon "university" %><%= t".school" %></strong>
+    <p class="text-muted"><%= @user.school %></p>
+    <%= link_to edit_supervisor_user_path(@user) do %>
+      <i class="fa fa-pencil" ></i>
+    <% end %>
+  </div>
 </div>
+
+
+
