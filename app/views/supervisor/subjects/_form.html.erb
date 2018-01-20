@@ -1,21 +1,22 @@
-  <%= form_for [:supervisor, @subject] do |f| %>
-    <%= render "shared/error_messages", object: f.object %>
+<%= form_for [:supervisor, @subject] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
 
-    <%= f.label :name %>
-    <%= f.text_field :name, class: "form-control" %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
 
-    <%= f.label :description %>
-    <%= f.text_area  :description, class: "form-control", rows: Settings.area_size %>
+  <%= f.label :description %>
+  <%= f.text_area  :description, class: "form-control", rows: Settings.area_size %>
 
-    <%= f.label :resources %>
-    <%= f.text_area  :resources, class: "form-control", rows: Settings.area_size %>
+  <%= f.label :resources %>
+  <%= f.text_area  :resources, class: "form-control",
+    rows: Settings.area_size, cols: Settings.area_size %>
 
-    <%= f.label :duration %>
-    <%= f.number_field :duration, class: "form-control number-field" %>
+  <%= f.label :duration %>
+  <%= f.number_field :duration, class: "form-control number-field" %>
 
-    <span class="picture">
-      <%= f.file_field :picture %>
-    </span>
+  <span class="picture">
+    <%= f.file_field :picture %>
+  </span>
 
-    <center><%= f.submit yield(:button_text), class: "btn btn-primary button-subject" %></center>
-  <% end %>
+  <center><%= f.submit yield(:button_text), class: "btn btn-primary button-subject" %></center>
+<% end %>

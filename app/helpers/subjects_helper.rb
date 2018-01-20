@@ -39,5 +39,4 @@ module SubjectsHelper
   def get_user user
     @user = User.find_by(id: user.user_id)
   end
-
 end

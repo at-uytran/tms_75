@@ -94,7 +94,6 @@ body {
   background: #fff;
   padding: 15px;
   color: #444;
-  border-top: 1px solid #d2d6de;
 }
 /* Fixed layout */
 .fixed .main-header,
@@ -2092,14 +2091,14 @@ a:focus {
   bottom: 0;
   width: 4px;
   background: #ddd;
-  left: 31px;
+  left: -45px;
   margin: 0;
   border-radius: 2px;
 }
 .timeline > li {
   position: relative;
   margin-right: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 .timeline > li:before,
 .timeline > li:after {
@@ -2130,6 +2129,7 @@ a:focus {
 .timeline > li > .timeline-item > .timeline-header {
   margin: 0;
   color: #555;
+  background-color: #b5ffb5;
   border-bottom: 1px solid #f4f4f4;
   padding: 10px;
   font-size: 16px;

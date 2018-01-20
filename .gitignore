@@ -10,7 +10,6 @@ capybara-*.html
 /public/uploads
 /coverage/
 /spec/tmp
-/app/assets/javascripts/i18n
 *.orig
 rerun.txt
 pickle-email-*.html
@@ -52,4 +51,3 @@ config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
 public/uploads
-app/assets/javascripts/i18n/translations.js

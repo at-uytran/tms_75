@@ -4,10 +4,10 @@ if(<%= @user_course.joined? %>){
 }
 else{
   $('#edit_user_course_<%= @user_course.id %>').html('<%= j(render partial: 'courses/button/finish_course', object: @user_course) %>');
-  $('.user-course-status').html('<span class="<%= @user_course.status %>"><%= @user_course.status %></span>')
+  $('.badge').replaceWith('<span class="<%= @user_course.status %> badge"><%= @user_course.status %></span>');
 }
 
 if(<%= @user_course.finished? %>){
   $('#edit_user_course_<%= @user_course.id %>').html('<div><%= t "courses.start_finish_course.finished" %></div>');
-  $('.user-course-status').html('<span class="<%= @user_course.status %>"><%= @user_course.status %></span>')
+  $('.badge').replaceWith('<span class="<%= @user_course.status %> badge"><%= @user_course.status %></span>');
 }

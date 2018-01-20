@@ -1,5 +1,5 @@
 <tr>
-  <td><%= gravatar_for trainer %></td>
+  <td><%= image_tag trainer.picture, class: "img img-mini-avatar" %></td>
   <td><%= link_to trainer.name, [@user, trainer] %></td>
   <td><%= trainer.email %></td>
 </tr>
