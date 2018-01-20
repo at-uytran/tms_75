@@ -31,7 +31,7 @@ module Supervisor
     def update
       if @user.update_attributes user_params
         flash[:success] = t "controllers.user_controller.update_success"
-        redirect_to @user
+        redirect_to supervisor_users_path
       else
         render :edit
       end
@@ -51,7 +51,7 @@ module Supervisor
 
     def user_params
       params.require(:user).permit :name, :email, :password,
-        :password_confirmation, :address, :school, :picture
+        :password_confirmation, :address, :school, :picture, :roles
     end
   end
 end

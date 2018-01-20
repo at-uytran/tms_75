@@ -254,23 +254,11 @@
 }
 
 .show_user{
-  padding: 10px;
-  margin: 10px;
   background-color: #ececf8;
-  border: solid black 1px;
-  border-radius: 5px;
-}
-
-.show_user ul{
-  list-style-type: none;
-  text-align: left;
 }
 
 .show-tasks{
-  padding: 10px;
-  margin: 10px;
   background-color: #ececf8;
-  border: solid black 1px;
   border-radius: 5px;
 }
 
@@ -298,8 +286,6 @@
 }
 
 .chart-progress-task{
-  padding: 20px;
-  margin: 0px 20px 50px 80px;
   background-color: #f5f3ea;
   border-radius: 10px;
 }
@@ -308,16 +294,13 @@
   padding: 10px;
   margin: 0px 0px 0px 10px;;
   background-color: #ececf8;
-  border: solid black 1px;
   border-radius: 5px;
 }
 
 .list-task-subject{
   background-color: #ececf8;
-  border: solid black 1px;
   border-radius: 5px;
-  padding: 10px;
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
 .subject_info ul{
@@ -329,8 +312,7 @@
   background-color: #ececf8;
   border: solid black 1px;
   border-radius: 5px;
-  padding: 10px;
-  margin-left: 10px;
+
 }
 
 .list_task_info ul{
@@ -354,8 +336,7 @@
 }
 
 .edit_subject_info{
-  padding: 10px;
-  margin: 10px 0px 0px 10px;;
+  margin-top: 10px;
   background-color: #ececf8;
   border: solid black 1px;
   border-radius: 5px;
@@ -368,4 +349,8 @@
 .content_task{
   color: #b5b2b2;
   font-size: 15px;
+}
+
+.button-init{
+  background-color: #00CC00 !important;
 }

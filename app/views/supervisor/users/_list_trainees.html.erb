@@ -1,11 +1,12 @@
 <div class="col-md-12">
-  <div class="table-responsive">
+  <div class="table table-bordered">
     <table class="table">
       <thead>
         <tr>
           <th><%= t".name" %></th>
           <th><%= t".email" %></th>
-          <th><%= t".option" %></th>
+          <th>#</th>
+          <th>#</th>
         </tr>
       </thead>
       <% @trainees.each do |trainee| %>
@@ -14,8 +15,8 @@
               <th><%= link_to trainee.name, supervisor_user_path(trainee) %></th>
               <th><%= trainee.email %></th>
               <% if current_user.admin? || current_user.trainer? %>
-                <th><%= link_to t(".update"), edit_supervisor_user_path(trainee) %>
-                  <%= link_to t("courses.index.delete"), supervisor_user_path(trainee),
+                <th><%= link_to t(".update"), edit_supervisor_user_path(trainee) %></th>
+                <th> <%= link_to t("courses.index.delete"), supervisor_user_path(trainee),
                   method: :delete, data: {confirm: t("courses.index.confirm_delete")} %></th>
               <% end %>
             </tr>

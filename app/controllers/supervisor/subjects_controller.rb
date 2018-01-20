@@ -62,7 +62,7 @@ module Supervisor
     end
 
     def subject_params
-      params.require(:subject).permit :name, :description, :duration, :picture
+      params.require(:subject).permit :name, :description, :resources, :duration, :picture
     end
   end
 end

@@ -1,3 +1,7 @@
+<div class="box box-">
+  <div class="box-header with-border">
+    <center><h3 class="box-title"><%= yield(:title) %></h3></center>
+  </div>
 <%= form_for [:supervisor, @user], class: "form-group" do |f| %>
   <%= render "shared/error_messages", object: f.object %>
 
@@ -11,20 +15,22 @@
   <%= f.text_field :address, class: "form-control" %>
 
   <%= f.label :school %>
-  <%= f.text_field :school, class: "form-control" %>
+  <%= f.text_field :school, class: "form-control" %><br>
 
   <%= f.label :roles %>
   <%= f.select(:roles, User.roles.keys) %><br><br>
 
-  <span class="picture">
+  <div class="form-group">
+    <label for="exampleInputFile">Picture</label>
     <%= f.file_field :picture %>
-  </span><br>
+  </div>
 
   <%= f.label :password %>
   <%= f.password_field :password, class: "form-control" %>
 
   <%= f.label :password_confirmation, t(".confirm") %>
-  <%= f.password_field :password_confirmation, class: "form-control" %>
+  <%= f.password_field :password_confirmation, class: "form-control" %><br>
 
-  <%= f.submit t(".button_text"), class: "btn btn-primary" %>
+  <center><%= f.submit yield(:button_text), class: "btn btn-primary" %></center>
 <% end %>
+</div>

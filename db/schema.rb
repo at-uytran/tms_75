@@ -36,8 +36,9 @@ ActiveRecord::Schema.define(version: 20180110092405) do
 
   create_table "subjects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
-    t.string "description"
+    t.text "description"
     t.integer "duration"
+    t.text "resources"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "picture"
