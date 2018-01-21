@@ -8,7 +8,6 @@ capybara-*.html
 /db/*.sqlite3-journal
 /public/system
 /public/uploads
-/app/assets/images
 /coverage/
 /spec/tmp
 /app/assets/javascripts/i18n

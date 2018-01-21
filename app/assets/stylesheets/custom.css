@@ -375,3 +375,21 @@
 .joined {
   background-color: #ffff4d;
 }
+
+.picture_nomal{
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.picture_nomal img{
+  border-radius: 50%;
+}
+
+.picture_nomal_subject{
+  width: 100px;
+  height: 100px;
+}
+
+.picture_nomal_subject img{
+  border-radius: 50%;
+}

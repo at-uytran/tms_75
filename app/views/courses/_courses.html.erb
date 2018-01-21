@@ -1,8 +1,7 @@
 <div class="item">
   <ul>
-    <li><%= link_to (image_tag user_course.course.picture.url,
-      class: "img-thumbnail"), user_course.course %></li>
-    <li><h4><%= user_course.course_name %></h4></li>
+    <li><%= link_to (picture_for user_course.course), user_course.course %></li>
+    <li><%= user_course.course_name %></li>
     <li><%= user_course.course_description %></li>
     <li><span class="<%= user_course.status %> badge"><%= user_course.status %></span></li>
   </ul>
