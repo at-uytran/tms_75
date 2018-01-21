@@ -405,3 +405,21 @@
 .button-init{
   background-color: #00CC00 !important;
 }
+
+.picture_nomal{
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.picture_nomal img{
+  border-radius: 50%;
+}
+
+.picture_nomal_subject{
+  width: 100px;
+  height: 100px;
+}
+
+.picture_nomal_subject img{
+  border-radius: 50%;
+}
