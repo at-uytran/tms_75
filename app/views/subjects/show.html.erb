@@ -16,6 +16,7 @@
         </div>
       </div>
     </div>
+    <%= render "resources", object: @user_subject %>
     <div class="chart-progress-task">
       <%= show_chart_subject(@user_courses,@subject_current) %>
     </div>
@@ -23,10 +24,8 @@
       <% @tasks.each do |task| %>
         <% @user_task = get_user_task(current_user.id, task.id) %>
         <div class="col-md-10 icon-status" >
-          <div class="col-md-1 w3agile_event_grid_left">
-            <div class="col-md-1 w3agile_event_grid_left" id="task_<%= task.id %>">
-              <%= get_status @user_task %>
-            </div>
+          <div class="col-md-1 w3agile_event_grid_left" id="task_<%= task.id %>">
+             <%= get_status @user_task %>
           </div>
           <div class="col-md-9 w3agile_event_grid_right">
             <h4><%= task.name %></h4>
