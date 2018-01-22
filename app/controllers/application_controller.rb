@@ -28,6 +28,5 @@ class ApplicationController < ActionController::Base
   def find_user
     @user = User.find_by(id: params[:id])
     return if @user
-    flash[:success] = I18n.t "controllers.user_controller.fail"
   end
 end

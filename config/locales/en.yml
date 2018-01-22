@@ -97,7 +97,10 @@ en:
         title: "Edit Task"
         button: "Update"
     subjects:
+      new:
+        title: "New"
       edit:
+        title: "Edit"
         list_tasks: "List Tasks"
         add_tasks: "Add Task"
         edit_subject: "Edit Subject"

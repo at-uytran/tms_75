@@ -24,7 +24,9 @@
         <% @user_task = get_user_task(current_user.id, task.id) %>
         <div class="col-md-10 icon-status" >
           <div class="col-md-1 w3agile_event_grid_left">
-            <%= get_status @user_task %>
+            <div class="col-md-1 w3agile_event_grid_left" id="task_<%= task.id %>">
+                <%= get_status @user_task %>
+              </div>
           </div>
           <div class="col-md-9 w3agile_event_grid_right">
             <h4><%= task.name %></h4>
